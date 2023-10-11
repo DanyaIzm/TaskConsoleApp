@@ -1,15 +1,24 @@
 # Task Console App
 
+Tiny project with really shitty OOP and architecture
+
+---
+
 ### Installation
-`
-    git clone https://github.com/DanyaIzm/TaskConsoleApp
-    cd TaskConsoleApp
-    python -m venv venv
-    venv\Scripts\activate OR venv\bin\activate
-    pip install -r requirements.txt
-`
+
+```bash
+git clone https://github.com/DanyaIzm/TaskConsoleApp
+cd TaskConsoleApp
+python -m venv venv
+venv\Scripts\activate OR venv\bin\activate
+pip install -r requirements.txt
+```
+
+---
 
 ### Usage
-`
-    python main.py
-`
+
+
+```bash
+python main.py
+```
