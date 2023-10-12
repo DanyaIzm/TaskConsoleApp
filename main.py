@@ -4,8 +4,8 @@ from task_app.storage import DatabaseTaskStorage
 
 
 def main():
-    # storage = DatabaseTaskStorage("./tasks.db")
-    storage = FileTaskStorage("./tasks.json")
+    # storage = FileTaskStorage("./tasks.json")
+    storage = DatabaseTaskStorage("./tasks.db")
     task_manager = TaskManager(storage=storage)
     app = App(task_manager=task_manager)
 
