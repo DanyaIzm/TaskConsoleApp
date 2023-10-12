@@ -14,6 +14,10 @@ class TaskStorage(ABC):
         ...
 
     @abstractclassmethod
+    def update_task(self, task: Task) -> None:
+        ...
+
+    @abstractclassmethod
     def get_all(self) -> list[Task]:
         ...
 

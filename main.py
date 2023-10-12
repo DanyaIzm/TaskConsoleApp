@@ -1,9 +1,11 @@
 from task_app import App, TaskManager
 from task_app.storage import FileTaskStorage
+from task_app.storage import DatabaseTaskStorage
+from task_app.task import Task
 
 
 def main():
-    storage = FileTaskStorage("./tasks.json")
+    storage = DatabaseTaskStorage("./tasks.db")
     task_manager = TaskManager(storage=storage)
     app = App(task_manager=task_manager)
 

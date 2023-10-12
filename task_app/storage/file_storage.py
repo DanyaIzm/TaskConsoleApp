@@ -30,6 +30,11 @@ class FileTaskStorage(TaskStorage):
         task.id = self.tasks[-1].id + 1 if self.tasks else 0
         self.tasks.append(task)
 
+    def update_task(self, task: Task) -> None:
+        for index, t in enumerate(self.tasks):
+            if t.id == task.id:
+                self.tasks[index] = task
+
     def get_all(self) -> list[Task]:
         return self.tasks
 

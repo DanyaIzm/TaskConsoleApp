@@ -18,5 +18,7 @@ class TaskManager:
         else:
             task.mark_as_uncompleted()
 
+        self.storage.update_task(task)
+
     def close(self) -> None:
         self.storage.close()
