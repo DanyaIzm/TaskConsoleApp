@@ -20,5 +20,8 @@ class TaskManager:
 
         self.storage.update_task(task)
 
+    def delete_task(self, task: Task) -> None:
+        self.storage.delete_task(task)
+
     def close(self) -> None:
         self.storage.close()

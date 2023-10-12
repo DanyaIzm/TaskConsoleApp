@@ -26,5 +26,9 @@ class TaskStorage(ABC):
         ...
 
     @abstractclassmethod
+    def delete_task(self, task: Task) -> None:
+        ...
+
+    @abstractclassmethod
     def close(self) -> None:
         ...

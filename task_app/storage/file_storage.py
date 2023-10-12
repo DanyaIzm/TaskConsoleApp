@@ -41,6 +41,11 @@ class FileTaskStorage(TaskStorage):
     def get_task(self, id: int) -> Task:
         ...
 
+    def delete_task(self, task: Task) -> None:
+        for t in self.tasks:
+            if t.id == task.id:
+                self.tasks.remove(t)
+
     def close(self) -> None:
         with open(self._path, "w") as file:
             file.write(json.dumps(self._serialize(self.tasks)))

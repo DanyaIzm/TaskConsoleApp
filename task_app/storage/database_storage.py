@@ -1,8 +1,10 @@
-from .storage import TaskStorage
-from task_app.task import Task
+import sqlite3
 from functools import wraps
 from typing import Any
-import sqlite3
+
+from task_app.task import Task
+
+from .storage import TaskStorage
 
 
 def _connection_provider(method):
@@ -67,6 +69,16 @@ class DatabaseTaskStorage(TaskStorage):
     @_connection_provider
     def get_task(self, id: int) -> Task:
         ...
+
+    @_connection_provider
+    def delete_task(self, task: Task) -> None:
+        query = """
+            DELETE FROM Tasks 
+            WHERE id = ?;
+        """
+
+        self._connection.execute(query, [task.id])
+        self._connection.commit()
 
     def close(self) -> None:
         pass

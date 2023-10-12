@@ -45,6 +45,9 @@ class MainScreen(Screen):
         if key == Key.tab:
             self.app.screen = AddTaskScreen(self.app)
 
+        if key == Key.delete:
+            self.app.task_manager.delete_task(self.app.tasks[self.app.selected_task])
+
     def _draw_header(self) -> None:
         print("Ваши задачи:\n")
 
