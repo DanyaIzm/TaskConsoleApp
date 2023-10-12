@@ -1,7 +1,7 @@
 from pynput.keyboard import Key, KeyCode, Listener
 
 from task_app.task_manager import TaskManager
-from task_app.screens.main_screen import MainScreen
+from .screens.main_screen import MainScreen
 
 
 class App:

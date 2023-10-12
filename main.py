@@ -1,6 +1,6 @@
-from task_app import App, TaskManager
-from task_app.storage import FileTaskStorage
-from task_app.storage import DatabaseTaskStorage
+from frontends.console_app import App
+from task_app import TaskManager
+from task_app.storage import DatabaseTaskStorage, FileTaskStorage
 
 
 def main():

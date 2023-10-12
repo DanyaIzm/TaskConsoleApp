@@ -4,7 +4,7 @@ from enum import Enum
 from pynput.keyboard import Key, KeyCode
 
 from task_app.task import Task
-from task_app.screens.screen import Screen
+from .screen import Screen
 
 
 class State(Enum):
