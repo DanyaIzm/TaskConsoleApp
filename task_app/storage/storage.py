@@ -1,4 +1,4 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 from task_app.task import Task
 
@@ -9,26 +9,26 @@ class TaskStorage(ABC):
     def __init__(self, path: str) -> None:
         super().__init__()
 
-    @abstractclassmethod
+    @abstractmethod
     def save_task(self, task: Task) -> None:
         ...
 
-    @abstractclassmethod
+    @abstractmethod
     def update_task(self, task: Task) -> None:
         ...
 
-    @abstractclassmethod
+    @abstractmethod
     def get_all(self) -> list[Task]:
         ...
 
-    @abstractclassmethod
+    @abstractmethod
     def get_task(self, id: int) -> Task:
         ...
 
-    @abstractclassmethod
+    @abstractmethod
     def delete_task(self, task: Task) -> None:
         ...
 
-    @abstractclassmethod
+    @abstractmethod
     def close(self) -> None:
         ...

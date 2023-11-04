@@ -1,4 +1,4 @@
-from abc import ABC, abstractclassmethod
+from abc import ABC, abstractmethod
 
 from pynput.keyboard import Key
 
@@ -8,10 +8,10 @@ class Screen(ABC):
         super().__init__()
         self.app = app
 
-    @abstractclassmethod
+    @abstractmethod
     def render(self) -> None:
         ...
 
-    @abstractclassmethod
+    @abstractmethod
     def handle_key_press(self, key: Key) -> None:
         ...
